@@ -1,6 +1,6 @@
-# 🐍 Python Loops – Practice Exercises
+# JS Loops – Practice Exercises
 
-A collection of 10 Python exercises focused on loops, patterns, and logic.
+A collection of 10 JavaScript exercises focused on loops, patterns, and logic.
 
 ---
 
@@ -122,4 +122,4 @@ Count the number of `"c"` characters in a given text.
 
 ---
 
-> 💡 These exercises cover `for` loops, `while` loops, nested loops, pattern generation, and string operations in Python.
+> 💡 These exercises cover `for` loops, `while` loops, nested loops, pattern generation, and string operations in JS.
