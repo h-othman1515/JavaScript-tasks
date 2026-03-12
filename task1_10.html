@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops - Tasks 1-10</title>
+</head>
+
+<body>
+    <script>
+        // task 1
+        // Create a script that displays numbers from **1 to 10** on one line separated by a dash **(-)**.
+        // There should be **no dash at the beginning or end**.
+        let numbers = "";
+        for (let i = 1; i <= 10; i++) {
+            numbers += `${i} - `;
+        }
+        console.log(numbers.slice(0, -2));
+
+        // task 2
+        // Create a script using a for loop to add all integers between 0 and 30 and display the total.
+        let sum = 0;
+        for (let i = 0; i <= 30; i++) {
+            sum += i;
+        }
+        console.log(sum);
+
+        // task 3
+        // Write a program that prints all even numbers from 1 to 50 using a loop.
+        for (let i = 1; i <= 50; i++) {
+            if (i % 2 == 0) {
+                document.write(i);
+            }
+        }
+
+        // task 4
+        // Write a program that prints numbers from 10 down to 1 using a loop.
+        for (let i = 10; i >= 1; i--) {
+            console.log(i);
+        }
+
+        // task 5
+        // Create a script to generate the following pattern using nested for loops.
+        // A A A A A
+        // A A A B B
+        // A A C C C
+        // A D D D D
+        // E E E E E
+        let n = 5;
+        for (let i = 0; i < n; i++) {
+            let row = " ";
+            for (let j = 0; j < n; j++) {
+                if (j < n - i - 1) {
+                    row += "A ";
+                } else {
+                    row += String.fromCharCode(65 + i) + ' ';
+                }
+            }
+            console.log(row);
+        }
+
+        // task 6
+        //Create a script to generate the following pattern using nested for loops.
+        // 1 1 1 1 1
+        // 1 1 1 2 2
+        // 1 1 3 3 3
+        // 1 4 4 4 4
+        // 5 5 5 5 5
+        let x = 5;
+        for (let i = 0; i < x; i++) {
+            let row = " ";
+            for (let j = 0; j < x; j++) {
+                if (j < x - i - 1) {
+                    row += "1 ";
+                } else {
+                    row += (1 + i) + ' ';
+                }
+            }
+            console.log(row);
+        }
+
+        // task 7
+        // Create a script to generate the following pattern using nested for loops.
+        //1 0 0 0 0
+        // 0 2 0 0 0
+        // 0 0 3 0 0
+        // 0 0 0 4 0
+        // 0 0 0 0 5
+        console.log("task 7");
+        let rows = 5;
+        for (let i = 0; i < rows; i++) {
+            console.log("0 ".repeat(i) + (i + 1) + " 0".repeat(rows - i - 1));
+        }
+
+        // task 8
+        // Write a program to calculate the factorial of a number using a for loop.
+        // The factorial of a number is the product of all integers up to that number.
+        let number = prompt("Enter a number:");
+        let fact = 1;
+        for (let i = 1; i <= number; i++) {
+            fact *= i;
+        }
+        console.log(fact);
+
+        // task 9
+        // Write a program to print the Fibonacci sequence using a loop.
+        // The Fibonacci sequence starts with 0 and 1, and each next number is the sum of the previous two numbers.
+        let num = Number(prompt("Enter a number:"));
+        let a = 0; 
+        let b = 1;
+        let sum_arr = [];
+        sum_arr.push(a);  
+        sum_arr.push(b); 
+        for (let i = 2; i < num; i++) {
+            sum = a + b;
+            sum_arr.push(sum);  
+            a = b;    
+            b = sum; 
+        }
+        console.log(sum_arr);
+
+        // task 10
+        // Write a program that counts the number of "c" characters in the following text:
+        let text = "Orange Coding School";
+        let count_c = 0;
+        for (let i = 0; i < text.length; i++) {
+            if (text[i].toLowerCase() === "c") {
+                count_c += 1;
+            }
+        }
+        console.log("The number of 'c' characters in the text is: " + count_c);
+    </script>
+</body>
+
+</html>
