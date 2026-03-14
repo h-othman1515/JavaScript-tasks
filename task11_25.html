@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 11 - 25</title>
+</head>
+
+<body>
+    <script>
+        // task 11
+        // Write a program that prints the multiplication table from 1 to 5 using nested loops.
+        console.log("------------ Task 11 ------------");
+        for (let i = 1; i <= 5; i++) {
+            console.log("Multiplication table for", i);
+            for (let j = 1; j <= 5; j++) {
+                console.log(i + " * " + j + " = " + i * j);
+            }
+        }
+
+        // task 12
+        // Write a program to generate and display the Floyd Triangle.
+        // Floyd's triangle is a triangular array of natural numbers.
+        console.log("------------ Task 12 ------------");
+        let n = 5;
+        let count = 1;
+        for (let i = 1; i <= n; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += count + " ";
+                count++;
+            }
+            console.log(row);
+        }
+
+        // task 13
+        // Write a program that prints all numbers between 1 and 100 that are divisible by 7. in the same line
+        console.log("------------ Task 13 ------------");
+        let numbers = [];
+        for (let i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                numbers.push(i);
+            }
+        }
+        console.log(numbers);
+
+        // task 14
+        // Write a program that prints the sum of all odd numbers between 1 and 100 using a loop.
+        console.log("------------ Task 14 ------------");
+        let sum = 0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 !== 0) {
+                sum += i;
+            }
+        }
+        console.log(sum);
+
+        // task 15
+        // Write a program that prints the square of numbers from 1 to 10 using a loop.
+        console.log("Task 15");
+        let square = [];
+        for (let i = 1; i <= 10; i++) {
+            square.push(i * i);
+        }
+        console.log(square);
+
+        // task 16
+        // Write a program that prints numbers from 1 to 30, but:
+        // print "Fizz" for multiples of 3
+        // print "Buzz" for multiples of 5
+        // print "FizzBuzz" for multiples of both 3 and 5
+        console.log("------------ Task 16 ------------");
+        let multiples = [];
+        for (let i = 1; i <= 30; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                multiples.push("FizzBuzz");
+            } else if (i % 3 == 0) {
+                multiples.push("Fizz");
+            } else if (i % 5 == 0) {
+                multiples.push("Buzz");
+            } else {
+                multiples.push(i);
+            }
+        }
+        console.log(multiples);
+
+        // task 17
+        // Write a program that prints the following pattern using nested loops.
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        console.log("------------ Task 17 ------------");
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "*";
+            }
+            console.log(row);
+        }
+
+        // task 18
+        // Write a program that prints the following pattern using nested loops.
+        // *****
+        // ****
+        // ***
+        // **
+        // *
+        console.log("------------ Task 18 ------------");
+        for (let i = 5; i >= 1; i--) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += "*";
+            }
+            console.log(row);
+        }
+
+        // task 19
+        // Write a program that prints the following pattern using nested loops.
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+        console.log("------------ Task 19 ------------");
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += j;
+            }
+            console.log(row);
+        }
+
+        // task 20
+        // Write a program that prints the following pattern using nested loops.
+        // 1
+        // 22
+        // 333
+        // 4444
+        // 55555
+        console.log("------------ Task 20 ------------");
+        for (let i = 1; i <= 5; i++) {
+            let row = "";
+            for (let j = 1; j <= i; j++) {
+                row += i;
+            }
+            console.log(row);
+        }
+
+        // task 21
+        // Write a program that prints numbers between 1 and 200 whose digit sum equals 5.
+        console.log("------------ Task 21 ------------");
+        for (let i = 1; i <= 200; i++) {
+            let sum = 0;
+            let num = i;
+            while (num > 0) {
+                sum += num % 10;
+                num = Math.floor(num / 10);
+            }
+            if (sum == 5) {
+                console.log(i);
+            }
+        }
+
+        // task 22
+        // Write a program that prints numbers between 1 and 100 where the first digit is greater than the last digit.
+        console.log("------------ Task 22 ------------");
+        for (let i = 1; i <= 100; i++) {
+            let num = i;
+            let firstDigit = num % 10;
+            let lastDigit = Math.floor(num / 10);
+            if (firstDigit > lastDigit) {
+                console.log("number (" + i + "): the first digit (" + firstDigit + ") is greater than the last digit (" + lastDigit + ")");
+            }
+        }
+
+        // task 23
+        // Write a program that prints numbers from 1 to 100 whose digits are the same
+        console.log("------------ Task 23 ----------");
+        for (let i = 1; i <= 100; i++) {
+            let num = i;
+            let firstDigit = num % 10;
+            let lastDigit = Math.floor(num / 10);
+            if (firstDigit == lastDigit) {
+                console.log("number (" + i + "): the first digit (" + firstDigit + ") is the same as the last digit (" + lastDigit + ")");
+            }
+        }
+
+        // task 24
+        // Write a program that prints numbers from 1 to 300 that are divisible by the product of their digits.
+        console.log("----------- Task 24 -----------");
+        let divisible = [];
+        for (let i = 1; i <= 300; i++) {
+            let num = i;
+            let product = 1;
+
+            while (num > 0) {
+                product *= num % 10; 
+                num = Math.floor(num / 10); 
+            }
+
+            if (product !== 0 && i % product === 0) {
+                divisible.push(i);
+            }
+        }
+        console.log(divisible);
+
+        // task 25
+        // Write a program that prints numbers between 1 and 100 where the digit sum equals the digit product.
+        console.log("------------ Task 25 ------------");
+        let task25 = [];
+        for (let i = 1; i <= 100; i++) {
+            let num = i; // i=1 , num = 1
+            let sum = 0;
+            let product = 1;
+            while (num > 0) { // num = 1
+                sum += num % 10; // sum = 1 ==> sum + (num % 10) = 0 + 1 % 10 = 1
+                product *= num % 10; // product = 1 , 1 * (1 % 10) = 1 * 1 = 1
+                num = Math.floor(num / 10); // num = floor(1 / 10) = floor(0.1) = 0
+            }
+            if (sum == product) { // 1 == 1? true
+                task25.push(i);
+            }
+        }
+        console.log(task25);
+    </script>
+</body>
+
+</html>
