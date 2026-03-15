@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 21 - 30</title>
+</head>
+
+<body>
+    <script>
+        // Task 21 : Check for Anagrams
+        // Check if the following two words are anagrams (contain the same letters).
+        console.log("------------ Task 21 ------------");
+        let word1 = "listen";
+        let word2 = "silent";
+        console.log("Does the words " + word1 + " and " + word2 + " form an anagram? " + (word1.split("").sort().join("") === word2.split("").sort().join("")));
+
+        // Task 22 : Reverse Words in Sentence
+        // Reverse the order of words in the sentence but keep the letters of each word unchanged.
+        console.log("------------ Task 22 ------------");
+        let sentence = "The quick brown fox";
+        console.log(sentence.split(" ").reverse().join(" "));
+
+        // Task 23 :  Find the Longest Word
+        // Find the longest word in the following sentence.
+        console.log("------------ Task 23 ------------");
+        let sentence23 = "The quick brown fox jumps over the lazy dog";
+        let longestWord23 = sentence23.split(" ").sort((a, b) => b.length - a.length)[0];
+        console.log(longestWord23);
+
+        // Task 24 : Advanced Palindrome
+        // Check if the sentence is a palindrome ignoring spaces, punctuation, and case.
+        console.log("------------ Task 24 ------------");
+        let input = "A man, a plan, a canal, Panama!";
+        let cleaned = "";
+        for (let i = 0; i < input.length; i++) {
+            let char = input[i].toLowerCase();
+            if (char >= "a" && char <= "z") {
+                cleaned += char;
+            }
+        }
+        let reversed = cleaned.split("").reverse().join("");
+        if (cleaned === reversed) {
+            console.log("Palindrome");
+        } else {
+            console.log("Not a Palindrome");
+        }
+
+        // Task 25 : Character Frequency
+        // Return an object that counts how many times each character appears.
+        console.log("------------ Task 25 ------------");
+        let word = "mississippi";
+        let frequency = {};
+        for (let i = 0; i < word.length; i++) {
+            let char = word[i];
+            if (frequency[char]) {
+                frequency[char]++;
+            } else {
+                frequency[char] = 1;
+            }
+        }
+        console.log(frequency);
+
+        // Task 26 : Replace Vowels with Numbers
+        // Replace vowels with numbers according to the rule:
+        // a = 1
+        // e = 2
+        // i = 3
+        // o = 4
+        // u = 5
+        console.log("------------ Task 26 ------------");
+        // let input26 = "hello world";
+        // input26.replaceAll("a", 1);
+        // input26.replaceAll("e", 2);
+        // input26.replaceAll("i", 3);
+        // input26.replaceAll("o", 4);
+        // input26.replaceAll("u", 5);
+        // console.log(input26);
+
+        // Task 27 : startsWith
+        // Check if the string "JavaScript is fun" starts with "Java".
+        console.log("------------ Task 27 ------------");
+        let str27 = "JavaScript is fun";
+        console.log(str27.startsWith("Java"));
+        
+        // Task 28 : endsWith
+        // Check if the string "image.png" ends with "png".
+        console.log("------------ Task 28 ------------");
+        let str28 = "image.png";
+        console.log(str28.endsWith("png"));
+
+        // Task 29 : repeat
+        // Repeat the string "ha" 3 times.
+        console.log("------------ Task 29 ------------");
+        let str29 = "ha";
+        console.log(str29.repeat(3));
+
+        // Task 30 : indexOf
+        // Find the position of the letter "o" in the string "Hello World".
+        console.log("------------ Task 30 ------------");
+        let str30 = "Hello World";
+        console.log(str30.indexOf("o"));
+    </script>
+</body>
+
+</html>

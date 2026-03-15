@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 11 - 20</title>
+</head>
+
+<body>
+    <script>
+        // Task 11 : Reverse a String
+        // Reverse the following string:
+        console.log("------------ Task 11 ------------");
+        let str11 = "hello";
+        console.log(str11.split("").reverse().join(""));
+
+        // Task 12 : Count Character Occurrences
+        // Count how many times the letter "e" appears in the string "elephant".
+        console.log("------------ Task 12 ------------");
+        let str12 = "elephant";
+        console.log(str12.split("e").length - 1);
+        console.log(str12.split("e"));
+
+        // Task 13 : Palindrome Check
+        // Check if the string "racecar" reads the same forward and backward.
+        console.log("------------ Task 13 ------------");
+        let str13 = "racecar";
+        let reverseStr13 = str13.split("").reverse().join("");
+        console.log("does the string read the same forward and backward? " + (str13 === reverseStr13));
+
+        // Task 14: Capitalize Each Word
+        // Convert the first letter of each word to uppercase.
+        console.log("------------ Task 14 ------------");
+        let str14 = "hello world";
+        let splited14 = str14.split(" ");
+        splited14[0] = splited14[0][0].toUpperCase() + splited14[0].slice(1);
+        splited14[1] = splited14[1][0].toUpperCase() + splited14[1].slice(1);
+        console.log(splited14.join(" "));
+
+
+        // Task 15 :  Format Number
+        // Convert the number 1234.5678 so it shows only 2 decimal places.
+        console.log("------------ Task 15 ------------");
+        let num15 = 1234.5678;
+        console.log(num15.toFixed(2));
+
+        // Task 16 : Extract Numbers from String
+        // Extract all numbers from the following sentence:
+        console.log("------------ Task 16 ------------");
+        let str16 = "There are 3 apples and 2 oranges";
+        console.log(str16.match(/\d+/g));
+
+        // Task 17 : Email Validation
+        // Check if the following string is a valid email format.
+        console.log("------------ Task 17 ------------");
+        let email = "example@email.com";
+        if (email.includes("@") && email.includes(".")) {
+            console.log(email + "is a valid email");
+        } else {
+            console.log(email + "is an invalid email");
+        }
+
+        // Task 18 : Replace Word
+        // Replace the word "bad" with "good" in the sentence:
+        console.log("------------ Task 18 ------------");
+        let str18 = "This is a bad word";
+        console.log(str18.replace("bad", "good"));
+
+        // Task 19 : Remove Duplicate Characters
+        // Remove duplicate characters from the string:
+        console.log("------------ Task 19 ------------");
+        let str19 = "aabbc";
+        let result = [];
+
+        for (let i = 0; i < str19.length; i++) {
+            if (!result.includes(str19[i])) {
+                result.push(str19[i]);
+            }
+        }
+        console.log(result);
+
+        // Task 20 : Sort Characters Alphabetically
+        // Sort the characters in the string "hello" alphabetically.
+        console.log("------------ Task 20 ------------");
+        let str20 = "hello";
+        console.log(str20.split("").sort().join(""));
+    </script>
+</body>
+
+</html>

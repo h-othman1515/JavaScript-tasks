@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 1 - 10</title>
+</head>
+<body>
+    <script>
+        // Task 1 : Concatenation
+        // Create two variables containing the strings "Hello" and "World".
+        // Write code that combines them into one string with a space between them.
+        console.log("------------ Task 1 ------------");
+        let var1 = "Hello";
+        let var2 = "World";
+        console.log(var1 + " " + var2);
+
+        // Task 2 : String Length
+        // Create a variable with the value "JavaScript".
+        // Write code to find how many characters are inside the string.
+        console.log("------------ Task 2 ------------");
+        let var3 = "JavaScript";
+        console.log("the length of ("+var3+") is "+var3.length);
+
+        // Task 3 : Access First Character
+        // Given the string "Programming", print only the first character.
+        console.log("------------ Task 3 ------------");
+        let var4 = "Programming";
+        console.log("the first character of ("+var4+") is "+var4[0]);
+
+        // Task 4 : Extract Part of a String
+        // From the string "coding is fun" extract the word "coding".
+        console.log("------------ Task 4 ------------");
+        let var5 = "coding is fun";
+        console.log("the first word of ("+var5+") is "+var5.slice(0, 6));
+
+        // Task 5 : Replace Characters
+        // Given the string "cat", replace the letter "a" with "e".
+        console.log("------------ Task 5 ------------");
+        let str = "cat";
+        console.log(str.replace("a", "e"));
+
+        // Task 6 : Convert to Uppercase
+        // Convert the string "javascript" to uppercase letters.
+        console.log("------------ Task 6 ------------");
+        let var6 = "javascript";
+        console.log(var6.toUpperCase());
+
+        // Task 7 : Split a String
+        // Convert the string "apple,banana,orange" into an array of fruits.
+        console.log("------------ Task 7 ------------");
+        let str7 = "apple,banana,orange";
+        console.log(str7.split(","));
+
+        // Task 8 :  Join Array into String
+        // Given the array:
+        // ["hello", "world"]
+        // Join the words into one string separated by a space.
+        console.log("------------ Task 8 ------------");
+        let arr8 = ["hello", "world"];
+        console.log(arr8.join(" "));
+
+        // Task 9 : Remove Extra Spaces
+        // Remove the extra spaces at the beginning and end of the following string:
+        console.log("------------ Task 9 ------------");
+        let str9 = " hello world ";
+        console.log(str9.trim());
+
+        // Task 10 :  Check if a Word Exists
+        // Check if the word "world" exists inside the string "hello world".
+        console.log("------------ Task 10 ------------");
+        let str10 = "hello world";
+        console.log(str10.includes("world"));
+    </script>
+</body>
+</html>
