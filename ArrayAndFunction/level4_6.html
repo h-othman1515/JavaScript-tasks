@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavel 4-6</title>
+</head>
+
+<body>
+    <script>
+        //  ====================================== Level 4 : String & Array Combined ======================================
+
+        // Task 16 : wordsLongerThan(arr,length)
+        // Return words longer than a specific length. [Hint : Use filter, length]
+        console.log("------------ Task 16 ------------");
+        function wordsLongerThan(arr, length) {
+            return arr.filter(word => word.length > length);
+        }
+        arr16 = ["apple", "banana", "cherry", "date", "elderberry"];
+        console.log("Original array: " + arr16);
+        lengthValue = Number(prompt("Enter a length: "));
+        console.log("Words longer than " + lengthValue + " characters: " + wordsLongerThan(arr16, lengthValue));
+
+        // Task 17 : countLetterInWords(arr,letter)
+        // Count how many words contain a specific letter. [Hint : Use includes, filter]
+        console.log("------------ Task 17 ------------");
+        function countLetterInWords(arr, letter) {
+            let result = {};
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].includes(letter)) {
+                    result[arr[i]] = arr[i].split(letter).length - 1; // the same as task 11
+                }
+            }
+            return result;
+        }
+        arr17 = ["apple", "banana", "cherry", "date", "blueberry"];
+        console.log("Original array: " + arr17);
+        letterValue = prompt("Enter a letter: ").toLocaleLowerCase();
+        console.log("Words containing the letter (" + letterValue + ") :", countLetterInWords(arr17, letterValue));
+
+        // Task 18 : removeShortWords(arr,length)
+        // Remove words shorter than a specific length. [Hint : Use filter]
+        console.log("------------ Task 18 ------------");
+        function removeShortWords(arr, length) {
+            return arr.filter(word => word.length >= length);
+        }
+        arr18 = ["apple", "banana", "cherry", "date", "elderberry"];
+        console.log("Original array: " + arr18);
+        lengthValue = Number(prompt("Enter a length: "));
+        console.log("Words longer than " + lengthValue + " characters: " + removeShortWords(arr18, lengthValue));
+
+        // Task 19 : findLongestWord(arr)
+        // Return the longest word in the array. [Hint : Use sort, length]
+        console.log("------------ Task 19 ------------");
+        function findLongestWord(arr) {
+            return arr.sort()[arr.length - 1]; // like task 8 and 7
+        }
+        arr19 = ["apple", "banana", "cherry", "date", "elderberry"];
+        console.log("Original array: " + arr19);
+        console.log("Longest word: " + findLongestWord(arr19));
+
+        // Task 20 : findShortestWord(arr)
+        // Return the shortest word. [Hint : Use sort]
+        console.log("------------ Task 20 ------------");
+        function findShortestWord(arr) {
+            return arr.sort()[0];
+        }
+        arr19 = ["apple", "banana", "cherry", "date", "elderberry"];
+        console.log("Original array: " + arr19);
+        console.log("Shortest word: " + findShortestWord(arr19));
+
+        // ====================================== Level 5 : Complex Challenges ======================================
+
+        // Task 21 : sortByLength(arr)
+        // Sort words by their length. [Hint : Use sort, length]
+        console.log("------------ Task 21 ------------");
+        function sortByLength(arr) {
+            return arr.sort((a, b) => a.length - b.length);
+        }
+        arr21 = ["apple", "banana", "cherry", "date", "elderberry"];
+        console.log("Original array: " + arr21);
+        console.log("Sorted array: " + sortByLength(arr21));
+
+        // Task 22 : removeEverySecond(arr)
+        // Remove every second element from the array. [Hint : Use filter, index]
+        console.log("------------ Task 22 ------------");
+        function removeEverySecond(arr) {
+            return arr.filter((element, index) => index % 2 === 0);
+        }
+        arr22 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 8, 9, 2, 13, "a", "b", "c", "d", "e"];
+        console.log("Original array: " + arr22);
+        console.log("Array without every second element: " + removeEverySecond(arr22));
+
+        // Task 23 : sumEvenNumbers(arr)
+        // Return the sum of even numbers. [Hint : Use filter (for giving me the even numbers), reduce (for summing them)]
+        console.log("------------ Task 23 ------------");
+        function sumEvenNumbers(arr) {
+            return arr.filter(num => num % 2 === 0).reduce((total, num) => total + num, 0);
+        }
+        arr23 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 8, 9, 2, 13];
+        console.log("Original array: " + arr23);
+        console.log("Sum of even numbers: " + sumEvenNumbers(arr23));
+
+        // Task 24 : sumOddIndex(arr)
+        // Return the sum of numbers in odd indexes. [Hint : Use filter, index]
+        console.log("------------ Task 24 ------------");
+        function sumOddIndex(arr) {
+            return arr.filter(num => num % 2 !== 0).reduce((total, num) => total + num, 0);
+        }
+        arr23 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 8, 9, 2, 13];
+        console.log("Original array: " + arr23);
+        console.log("Sum of odd numbers: " + sumOddIndex(arr23));
+
+        // Task 25 : reverseWithoutReverse(arr)
+        // Reverse the array without using reverse(). [Hint : Use unshift]
+        console.log("------------ Task 25 ------------");
+        function reverseWithoutReverse(arr) {
+            let reversed = [];
+            for (let i = 0; i < arr.sort((a, b) => a - b).length; i++) {
+                reversed.unshift(arr[i]);
+            }
+            return reversed;
+        }
+        arr23 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 8, 9, 2, 13];
+        console.log("Original array: (sorted) " + arr23.sort((a, b) => a - b));
+        console.log("Reversed array: " + reverseWithoutReverse(arr23));
+
+        // ====================================== Level 6 : Hard Challenges =====================================
+
+        // Task 26 : findMissingNumber(arr)
+        // The array contains numbers from 1 to N, but one number is missing.
+        // Return the missing number. [Hint : Use sort]
+        console.log("------------ Task 26 ------------");
+        function findMissingNumber(arr) {
+            arr.sort((a, b) => a - b);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== i + 1) {
+                    return i + 1;
+                }
+            }
+        }
+        arr26 = [1, 2, 3, 5, 6, 7, 8, 9, 10];
+        console.log("Original array: " + arr26);
+        console.log("Missing number: " + findMissingNumber(arr26));
+
+        // Task 27 : pairSum(arr,target)
+        // Return two numbers that sum to target. [Hint : Use includes]
+        console.log("------------ Task 27 ------------");
+        function pairSum(arr, target) {
+            for (let i = 0; i < arr.length; i++) {
+                let value = target - arr[i]; // what number do I need? so value is the number I need // target = 15 , value = 10 , arr[4] = 5
+                if (arr.includes(value) && value !== arr[i]) { // is the value in the array? and is it NOT the same number?
+                    return [arr[i], value]; // arr[4] = 5 , value = 10
+                }
+            }
+        }
+        arr27 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("Original array: " + arr27);
+        target = Number(prompt("Enter a target: "));
+        console.log("Pair that sums to " + target + ": " + pairSum(arr27, target));
+
+        // Task 28 : rotateArray(arr,steps)
+        // Rotate the array to the right by N steps. [Hint : Use slice, concat]
+        console.log("------------ Task 28 ------------");
+        function rotateArray(arr, steps) {
+            return arr.slice(steps).concat(arr.slice(0, steps)); //arr.slice(start, end)
+        }
+        arr28 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("Original array: " + arr28);
+        steps = Number(prompt("Enter steps: "));
+        console.log("Rotated array: " + rotateArray(arr28, steps));
+
+        // Task 29 : chunkArray(arr,size)
+        // Split the array into smaller arrays of size N. [Hint : Use slice]
+        console.log("------------ Task 29 ------------");
+        function chunkArray(arr, size) {
+            let chunks = [];
+            for (let i = 0; i < arr.length; i += size) {//i jumps by size each time
+                chunks.push(arr.slice(i, i + size)); //Cut a piece of size N from the array starting at i | arr.slice(0, 3) start = 0 , end = 0 + 3 (size = 3)
+            }
+            return chunks;
+        }
+        arr29 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("Original array: " + arr29);
+        size = Number(prompt("Enter size: "));
+        console.log("Chunked array: ", chunkArray(arr29, size));
+
+        // Task 30 : groupByLength(arr)
+        // Group words by their length. [Hint: Use length, object, push]
+        console.log("------------ Task 30 ------------");
+        function groupByLength(arr) {
+            let gruops = {};
+            for (let i = 0; i < arr.length; i++) {
+                let len = arr[i].length;
+                if (!gruops[len]) {    // if the key does not exist
+                    gruops[len] = []; // make a new key
+                }
+                gruops[len].push(arr[i]); // add the word to the key
+            }
+            return gruops; 
+        }
+        arr30 = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi", "lemon"];
+        console.log("Original array: " + arr30);
+        console.log("Grouped by length: ", groupByLength(arr30));
+    </script>
+</body>
+
+</html>

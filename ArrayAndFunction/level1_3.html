@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavel 1-3</title>
+</head>
+
+<body>
+    <script>
+        //  ====================================== Level 1 : Array Manipulation ======================================
+
+        // Task 1 : firstAndLast(arr)
+        // Create a function that returns an array containing only the first and last elements. [Hint : Use slice, length]
+        console.log("------------ Task 1 ------------");
+        function firstAndLast(arr) {
+            return arr.slice(0, 1).concat(arr.slice(arr.length - 1)); // arr.slice(start, end)
+        }
+        arr1 = [1, 2, 3, 4, 5];
+        console.log("The first and last elements : " + firstAndLast(arr1));
+
+
+        // Task 2 : removeMiddle(arr)
+        // Create a function that removes the middle element from an array. [Hint : Use splice, length]
+        console.log("------------ Task 2 ------------");
+        function removeMiddle(arr) {
+            if (arr.length % 2 == 0) {
+                arr.splice(arr.length / 2 - 1, 2); // arr.splice(start, deleteCount, itemN)
+            }
+            else {
+                arr.splice(arr.length / 2, 1); // arr.splice(start, deleteCount, itemN)
+            }
+            return arr;
+        }
+        arr2 = [1, 2, 3, 4, 5, 6];
+        console.log("The array [" + arr2 + "] without the middle element : " + removeMiddle(arr2));
+
+        // Task 3 : swapFirstLast(arr)
+        // Create a function that swaps the first and last elements. [Hint : Use length]
+        console.log("------------ Task 3 ------------");
+        function swapFirstLast(arr) {
+            let temp = arr[0];
+            arr[0] = arr[arr.length - 1];
+            arr[arr.length - 1] = temp;
+            return arr;
+        }
+        arr3 = [1, 2, 3, 4, 5];
+        console.log("The Original array: [" + arr3 + "] , The array after swapped: " + swapFirstLast(arr3));
+
+        // Task 4 : insertAtMiddle(arr,value)
+        // Insert a value in the middle of the array. [Hint : Use splice]
+        console.log("------------ Task 4 ------------");
+        function insertAtMiddle(arr, value) {
+            arr.splice(arr.length / 2, 0, value); // arr.splice(start, deleteCount, itemN)
+            return arr;
+        }
+        arr4 = [1, 2, 3, 4, 5];
+        console.log("The Original array: [" + arr4 + "] , The array after inserted: " + insertAtMiddle(arr4, 6));
+
+        // Task 5 : duplicateArray(arr)
+        // Create a function that duplicates the array content. [Hint : Use concat]
+        console.log("------------ Task 5 ------------");
+        function duplicateArray(arr) {
+            return arr.concat(arr);
+        }
+        arr5 = [1, 2, 3, 4, 5];
+        console.log("The Original array: [" + arr5 + "] , The array after duplicated: " + duplicateArray(arr5));
+
+        // ====================================== Level 2 : Filtering & Searching ======================================
+
+        // Task 6 : removeDuplicates(arr)
+        // Create a function that removes duplicate numbers. [Hint : Use includes, push]
+        console.log("------------ Task 6 ------------");
+        function removeDuplicates(arr) {
+            let unique = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (!unique.includes(arr[i])) {
+                    unique.push(arr[i]);
+                }
+            }
+            return unique;
+        }
+        arr6 = [1, 2, 3, 4, 5];
+        console.log("The Original array: [" + arr6 + "] , The array after removed duplicates: " + removeDuplicates(arr6));
+
+
+        // Task 7 : findSecondLargest(arr)
+        // Return the second largest number. [Hint : Use sort]
+        console.log("------------ Task 7 ------------");
+        function findSecondLargest(arr) {
+            let length = arr.length;
+            return arr.sort()[length - 2];
+        }
+        arr7 = [4, 6, 8, 2, 3];
+        console.log("The Sorted array: [" + arr7.sort() + "] ," + "The second largest number: " + findSecondLargest(arr7));
+
+        // Task 8 : findSecondSmallest(arr)
+        // Return the second smallest number. [Hint : Use sort]
+        console.log("------------ Task 8 ------------");
+        function findSecondSmallest(arr) {
+            return arr.sort()[1];
+        }
+        arr8 = [4, 6, 8, 2, 3];
+        console.log("The Sorted array: [" + arr8.sort() + "] ," + "The second smallest number: " + findSecondSmallest(arr8));
+
+
+        // Task 9 : removeGreaterThan(arr,value)
+        // Return a new array without numbers greater than a given value. [Hint : Use filter]
+        console.log("------------ Task 9 ------------");
+        function removeGreaterThan(arr, value) {
+            return arr.filter(num => num <= value);
+        }
+        arr9 = [29 , 8, 4, -1 ,3 , 9 , 6, 2, 0, 5];
+        value9 = Number(prompt("Enter a value: "));
+        console.log("The Original array: [" + arr9 + "]");
+        console.log("The array after removed greater than " + value9 + " : " + (removeGreaterThan(arr9, value9)));
+
+        // Task 10 : removeLessThan(arr,value)
+        // Return numbers greater than or equal to the value. [Hint : Use filter]
+        console.log("------------ Task 10 ------------");
+        function removeLessThan(arr, value) {
+            return arr.filter(num => num >= value);
+        }
+        arr10 = [29 , 8, 4, -1 ,3 , 9 , 6, 2, 0, 5];
+        value10 = Number(prompt("Enter a value: "));
+        console.log("The Original array: [" + arr10 + "]");
+        console.log("The array after removed less than "+ value10 + " : " + (removeLessThan(arr10, value10)));
+
+        // ====================================== Level 3 : Advanced Array Logic =====================================
+
+        // Task 11 : countOccurrences(arr,value)
+        // Return how many times a value appears. [Hint : Use filter, length]
+        console.log("------------ Task 11 ------------");
+        function countOccurrences(arr, value) {
+            return arr.filter(num => num === value).length;
+        }
+        arr11 = [29 , 8, 4, -1 ,3 , 9 , 6, 2, 0, 5, 29, 5, 6, 10 , 1, 15 ,30 ,66];
+        console.log("The Original array: [" + arr11 + "]");
+        value11 = Number(prompt("Enter a value: "));
+        console.log("The number of occurrences of " + value11 + " is: " + countOccurrences(arr11, value11));
+
+        // Task 12 : arrayIntersection(arr1,arr2)
+        // Return elements that exist in both arrays. [Hint : Use filter, includes]
+        console.log("------------ Task 12 ------------");
+        function arrayIntersection(arr1, arr2) {
+            return arr1.filter(num => arr2.includes(num));
+        }
+        arrA = [1, 2, 3, 4, 5];
+        arrB = [3, 4, 5, 6, 7];
+        console.log("The first array: [" + arrA + "]");
+        console.log("The second array: [" + arrB + "]");
+        console.log("The array after intersection: " + arrayIntersection(arrA, arrB));
+
+        // Task 13 : arrayDifference(arr1,arr2)
+        // Return values that exist in arr1 but not in arr2. [Hint : Use filter, includes]
+        console.log("------------ Task 13 ------------");
+        function arrayDifference(arr1, arr2) {
+            return arr1.filter(num => !arr2.includes(num));
+        }
+        arrC = [1, 2, 3, 4, 5];
+        arrD = [3, 4, 5, 6, 7];
+        console.log("The first array: [" + arrC + "]");
+        console.log("The second array: [" + arrD + "]");
+        console.log("The array after difference: " + arrayDifference(arrC, arrD));
+
+        // Task 14 : uniqueMerge(arr1,arr2)
+        // Merge two arrays and remove duplicates. [Hint : Use concat, includes]
+        console.log("------------ Task 14 ------------");
+        function uniqueMerge(arr1, arr2) {
+            return arr1.concat(arr2);
+        }
+        arrE = [1, 2, 3, 4, 5];
+        arrF = [3, 4, 5, 6, 7];
+        console.log("The first array: [" + arrE + "]");
+        console.log("The second array: [" + arrF + "]"); // i used the function removeDuplicates that i created in task 6
+        console.log("The array after unique merge: " + removeDuplicates(uniqueMerge(arrE, arrF)));
+
+        // Task 15 : removeNegativeNumbers(arr)
+        // Remove all negative numbers. [Hint: Use filter]
+        console.log("------------ Task 15 ------------");
+        function removeNegativeNumbers(arr) {
+            return arr.filter(num => num >= 0);
+        }
+        arrG = [1, 2, 3, 4, 5, -1, -2, -3, -4, -5];
+        console.log("The Original array: [" + arrG + "]");
+        console.log("The array after removed negative numbers: " + removeNegativeNumbers(arrG));
+    </script>
+</body>
+
+</html>
