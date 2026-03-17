@@ -171,4 +171,111 @@ The "Heavy Lifters" — these tasks require deep logic to analyze numbers within
 
 ---
 
+---
+
+# 🔄 JavaScript — `map()` & `forEach()` Practice
+
+> **20 exercises** to practice array iteration using `.map()` and `.forEach()`.
+
+---
+
+## 📋 Rules
+
+- ✅ Use `.map()` when the task **returns a new array**
+- ✅ Use `.forEach()` when the task **doesn't need to return** (e.g., counting, summing)
+- 🧪 Test each function with the provided test cases
+
+---
+
+## 🟢 Beginner (1 – 10)
+
+1. `doubleNumbers(arr)` — Double each number
+2. `numbersToStrings(arr)` — Convert numbers to strings
+3. `upperCaseNames(arr)` — Uppercase all names
+4. `addFive(arr)` — Add 5 to each number
+5. `getNames(arr)` — Extract names from objects
+6. `wordLengths(arr)` — Return length of each word
+7. `valTimesIndex(arr)` — Multiply each value by its index
+8. `makeUsernames(arr)` — Add `@` prefix to usernames
+9. `squareNumbers(arr)` — Return squares of numbers
+10. `firstLetters(arr)` — Get first letter of each word
+
+---
+
+## 🟡 Intermediate (11 – 20)
+
+11. `sumNumbers(arr)` — Total sum using `forEach`
+12. `countEven(arr)` — Count even numbers
+13. `timesTen(arr)` — Multiply each number by 10
+14. `addAdult(arr)` — Add `adult` boolean property to objects
+15. `addTax(arr)` — Add 10% tax to each price
+16. `countBig(arr)` — Count numbers greater than 50
+17. `labelNumbers(arr)` — Convert to `"Number: X"` format
+18. `productNames(arr)` — Extract product names from objects
+19. `addIndex(arr)` — Add index to each number
+20. `isEvenArray(arr)` — Return boolean array (true if even)
+
+---
+
+---
+
+# 🎮 JavaScript Scope & Output Challenges — Interactive Quiz
+
+> **15 interview-level questions** to test deep understanding of `var` vs `let` behavior.
+
+---
+
+## 🎯 Objectives
+
+- Test deep understanding of **scope**
+- Identify common **interview traps**
+- Master **hoisting**, **closures**, and **async behavior**
+
+---
+
+## 🧩 Topics Covered
+
+| Tag | Concept |
+|-----|---------|
+| 🟣 Hoisting | Variable & function hoisting traps |
+| 🟠 TDZ | Temporal Dead Zone with `let` |
+| 🔵 Scope | Function scope vs block scope |
+| 🟢 Closure | Nested functions & variable capture |
+| 🩷 Async | `setTimeout` + loop behavior |
+
+---
+
+## 📝 Questions Overview
+
+| # | Title | Concept |
+|---|-------|---------|
+| 1 | Hoisting Trap | `var` before declaration |
+| 2 | Temporal Dead Zone | `let` before declaration |
+| 3 | Function vs Block Scope | `var` inside `if` block |
+| 4 | Shadowing + TDZ Trap | `let` in function with TDZ |
+| 5 | Classic Closure Problem | `var` + `setTimeout` in loop |
+| 6 | Closure with `let` | `let` + `setTimeout` in loop |
+| 7 | Nested Scope | Closure over outer variable |
+| 8 | Re-declaration Error | `var` then `let` same name |
+| 9 | Function vs Variable Hoisting | Function declaration priority |
+| 10 | Scope + Mutation | Modifying outer `let` from inside |
+| 11 | Block Scope Leakage | `var` inside `{}` block |
+| 12 | Block Scope (`let`) | `let` inside `{}` block |
+| 13 | Parameter Shadowing | Param vs outer variable |
+| 14 | Closure + Async Trap | `var` loop + `setTimeout` |
+| 15 | IIFE Fix | IIFE as closure solution |
+
+---
+
+## 🚀 How to Play
+
+1. Open `js-quiz.html` in your browser
+   link: https://h-othman1515.github.io/Portfolio/js-quiz.html
+2. Read the code snippet carefully
+3. Pick the correct output from 4 options
+4. Read the explanation to understand **why**
+5. Track your score at the end 🏆
+
+---
+
 *Happy Coding! 💻✨*
