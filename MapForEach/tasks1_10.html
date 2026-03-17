@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 1 - 10</title>
+</head>
+
+<body>
+    <script>
+        //  Task 1
+        //Double each number in the array
+        console.log("------------ Task 1 ------------");
+        function doubleNumbers(arr) {
+            return arr.map(num => num * 2);
+        }
+        let numbers = [1, 2, 3, 4, 5];
+        console.log("The original array : "+numbers);
+        console.log("The double array :",doubleNumbers(numbers));
+
+        //  Task 2
+        // Convert numbers to strings
+        console.log("------------ Task 2 ------------");
+        function numbersToStrings(arr) {
+            return arr.map(num => num.toString());
+        }
+        let numbers2 = [1, 2, 3, 4, 5];
+        console.log("The original array : "+numbers2);
+        console.log("The string array :",numbersToStrings(numbers2));
+
+        // Task 3
+        // Make all names uppercase
+        console.log("------------ Task 3 ------------");
+        function upperCaseNames(arr) {
+            return arr.map(name => name.toUpperCase());
+        }
+        const names = ["John", "Jane", "Bob", "Alice", "Eve"];
+        console.log("The original array : "+names);
+        console.log("The uppercase array :",upperCaseNames(names));
+
+        // Task 4
+        // Add 5 to each number
+        console.log("------------ Task 4 ------------");
+        function addFive(arr) {
+            return arr.map(num => num + 5);
+        }
+        let numbers4 = [1, 2, 3, 4, 5];
+        console.log("The original array : "+numbers4);
+        console.log("The add 5 array :",addFive(numbers4));
+        
+        // Task 5
+        // Get only the name from objects
+        console.log("------------ Task 5 ------------");
+        function getNames(arr) {
+            return arr.map(obj => obj.name);
+        }
+        let people = [
+            { name: "John", age: 25 },
+            { name: "Jane", age: 30 },
+            { name: "Bob", age: 35 },
+            { name: "Alice", age: 40 },
+            { name: "Eve", age: 45 },
+        ];
+        console.log("The original array :",people);
+        console.log("The name array :",getNames(people));
+        
+        // Task 6
+        // Return the length of each word
+        console.log("------------ Task 6 ------------");
+        function wordLengths(arr) {
+            return arr.map(word => word.length);
+        }
+        let words = ["apple", "banana", "cherry", "date", "elderberry"];
+        console.log("The original array : "+words);
+        console.log("The length array :",wordLengths(words));
+        
+        // Task 7
+        // Multiply each number by its index
+        console.log("------------ Task 7 ------------");
+        function valTimesIndex(arr) {
+            return arr.map((num, index) => num * index);
+        }
+        let numbers7 = [4, 6 ,8 ,10, 12];
+        console.log("The original array : "+numbers7);
+        for(let i = 0; i < numbers7.length; i++){
+         console.log("number[",i,"] = (",numbers7[i],")");   
+        }
+        console.log("The multiply array :",valTimesIndex(numbers7));
+        
+        
+        // Task 8
+        // Create array of usernames starting with "@"
+        console.log("------------ Task 8 ------------");
+        function makeUsernames(arr) {
+            return arr.map(name => "@" + name);
+        }
+        let names8 = ["John", "Jane", "Bob", "Alice", "Eve"];
+        console.log("The original array : "+names8);
+        console.log("The username array :",makeUsernames(names8));
+        
+        // Task 9
+        // Create array of squares
+        console.log("------------ Task 9 ------------");
+        function squareNumbers(arr) {
+            return arr.map(num => num ** 2);
+        }
+        let numbers9 = [1, 2, 3, 4, 5];
+        console.log("The original array : "+numbers9);
+        console.log("The square array :",squareNumbers(numbers9));
+        
+        // Task 10
+        // Convert words to their first letter
+        console.log("------------ Task 10 ------------");
+        function firstLetters(arr) {
+            return arr.map(word => word[0].toUpperCase());
+        }
+        let words10 = ["apple", "banana", "strawberry", "kiwi", "watermelon"];
+        console.log("The original array : "+words10);
+        console.log("The first letter array :",firstLetters(words10));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks 11 - 20</title>
+</head>
+
+<body>
+    <script>
+        //  Task 11
+        // Count total sum using forEach
+        console.log("------------ Task 11 ------------");
+        let sum = 0;
+        function sumNumbers(arr) {
+            return arr.forEach((num) => sum += num);
+        }
+        let arr11 = [1, 2, 3, 4, 5];
+        sumNumbers(arr11);
+        console.log("The Original array : " + arr11);
+        console.log("The sum of the array : ", sum);
+
+        // Task 12
+        // Count how many numbers are even
+        console.log("------------ Task 12 ------------");
+        function countEven(arr) {
+            let Evencount = 0;
+            arr.forEach(num => {
+                if (num % 2 === 0) {
+                    Evencount++;
+                }
+            });
+            return Evencount;
+        }
+        let arr12 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("The Original array : " + arr12);
+        console.log("The number of even numbers in the array : " + countEven(arr12));
+
+        // Task 13
+        // Create array where each number becomes number * 10
+        console.log("------------ Task 13 ------------");
+        function timesTen(arr) {
+            return arr.map((num) => num * 10);
+        }
+        let arr13 = [1, 2, 3, 4, 5];
+        console.log("The Original array : " + arr13);
+        console.log("The multiply array : " + timesTen(arr13));
+
+        // Task 14
+        // Add property "adult" depending on age
+        console.log("------------ Task 14 ------------");
+        function addAdult(arr) {
+            return arr.map((person) => {
+                if (person.age >= 18) {
+                    person.isAdult = true;
+                } else {
+                    person.iaAdult = false;
+                }
+                return person;
+            });
+        }
+        let arr14 = [
+            { name: "John", age: 25 },
+            { name: "Jane", age: 30 },
+            { name: "Bob", age: 35 },
+            { name: "Alice", age: 16 },
+            { name: "Eve", age: 10 },
+        ];
+        console.log("The Original array : ", arr14);
+        console.log("The addAdult array : ", addAdult(arr14));
+
+        // Task 15
+        // Create array of prices after adding 10 tax
+        console.log("------------ Task 15 ------------");
+        function addTax(arr) {
+            return arr.map((num) => num + 10);
+        }
+        let arr15 = [1, 2, 3, 4, 5];
+        console.log("The Original array : " + arr15);
+        console.log("The addTax array : " + addTax(arr15));
+
+        // Task 16
+        // Count how many numbers are greater than 50
+        console.log("------------ Task 16 ------------");
+        function countBig(arr) {
+            let count50 = 0;
+            arr.forEach(num => {
+                if (num > 50) {
+                    count50++;
+                }
+            });
+            return count50;
+        }
+        let arr16 = [1, 2, 3, 4, 5, 51, 52, 53, 54, 55];
+        console.log("The Original array : " + arr16);
+        console.log("The number of numbers greater than 50 in the array : " + countBig(arr16));
+
+        // Task 17
+        // Convert numbers to "Number: X"
+        console.log("------------ Task 17 ------------");
+        function labelNumbers(arr) {
+            return arr.map(num => "Number: " + num);
+        }
+        let arr17 = [1, 2, 3, 4, 5];
+        console.log("The Original array : " + arr17);
+        console.log("The addFive array : " + labelNumbers(arr17));
+
+        // Task 18
+        // Get product names
+        console.log("------------ Task 18 ------------");
+        function productNames(arr) {
+            return arr.map(product => product.name);
+        }
+        let products = [
+            {name:"Laptop",price:1000},
+            {name:"Phone",price:500}
+        ];
+        console.log("The Original array :",products);
+        console.log("The product names array : ",productNames(products));
+
+        // Task 19
+        // Create array where each number becomes number + index
+        console.log("------------ Task 19 ------------");
+        function addIndex(arr) {
+            return arr.map((num, index) => num + index);
+        }
+        let arr19 = [1, 2, 3, 4, 5];
+        console.log("The Original array : " + arr19);
+        console.log("The addIndex array : " + addIndex(arr19));
+
+        // Task 20
+        // Create array of boolean values (true if even)
+        console.log("------------ Task 20 ------------");
+        function isEvenArray(arr) {
+            return arr.map(num => num % 2 === 0);
+        }
+        let arr20 = [1, 2, 3, 4, 5];
+        console.log("The Original array : " + arr20);
+        console.log("The isEvenArray array : " + isEvenArray(arr20));
+    </script>
+</body>
+
+</html>
