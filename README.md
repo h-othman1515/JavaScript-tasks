@@ -277,5 +277,102 @@ The "Heavy Lifters" — these tasks require deep logic to analyze numbers within
 5. Track your score at the end 🏆
 
 ---
+# 🌙 Eid Challenge — Advanced JavaScript Problem Solving
+
+A collection of 6 algorithmic challenges solved in pure JavaScript with no built-in array methods — built as part of the Orange Digital Village internship curriculum.
+
+---
+
+## 📌 Live Demo
+
+> Open `index.html` in any browser — results render directly on the page.
+
+---
+
+## 🧩 Tasks Overview
+
+| # | Task | Technique | Complexity |
+|---|------|-----------|------------|
+| 1 | Log Compression System | Single pass + grouping | O(n) |
+| 2 | Subarray with Given Sum | Sliding window | O(n) |
+| 3 | Maximum Profit | Greedy / one-pass | O(n) |
+| 4 | Trap Rain Water | Prefix max arrays | O(n) |
+| 5 | Longest Unique Subarray | Sliding window | O(n²) |
+| 6 | Product of Array Except Self | Nested loops | O(n²) |
+
+---
+
+## 📂 Project Structure
+
+```
+eid-challenge/
+└── index.html   ← all logic + UI in one file
+```
+
+---
+
+## 📖 Task Descriptions
+
+### 1️⃣ Log Compression System
+Groups consecutive identical events and counts how many times each occurred.
+
+**Input:**
+```js
+[{ event:"click", time:1 }, { event:"click", time:2 }, { event:"scroll", time:3 }, ...]
+```
+**Output:**
+```js
+[{ event:"click", count:2 }, { event:"scroll", count:2 }, { event:"click", count:1 }]
+```
+
+---
+
+### 2️⃣ Subarray with Given Sum
+Finds the start and end indices of a continuous subarray that adds up to a target value.
+
+**Input:** `[1, 4, 20, 3, 10, 5]`, target = `33`  
+**Output:** `start = 2, end = 4` → subarray `[20, 3, 10]`
+
+---
+
+### 3️⃣ Maximum Profit
+Finds the maximum profit from a single buy-sell transaction on stock prices.
+
+**Input:** `[7, 1, 5, 3, 6, 4]`  
+**Output:** `5` (buy at 1, sell at 6)
+
+---
+
+### 4️⃣ Trap Rain Water 💀
+Calculates total water trapped between buildings after rain.
+
+**Input:** `[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]`  
+**Output:** `6 units`
+
+---
+
+### 5️⃣ Longest Unique Subarray
+Finds the longest continuous subarray with no repeated values.
+
+**Input:** `[1, 2, 3, 1, 2, 3, 4, 5]`  
+**Output:** `[1, 2, 3, 4, 5]`
+
+---
+
+### 6️⃣ Product of Array Except Self
+Replaces each element with the product of all other elements. No division allowed.
+
+**Input:** `[1, 2, 3, 4]`  
+**Output:** `[24, 12, 8, 6]`
+
+---
+
+## ⚠️ Rules Followed
+
+- ❌ No built-in array methods (`map`, `filter`, `reduce`, `sort`, `includes`, etc.)
+- ✅ Only loops, conditions, and variables
+- ✅ Time complexity considered for each solution
+
+---
 
 *Happy Coding! 💻✨*
